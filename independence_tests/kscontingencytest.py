@@ -7,9 +7,12 @@ import numpy as np
 from scipy.stats import chi2_contingency, kstest
 
 from abstract_classes import IndependenceTest
-from independence_tests.fisher_exact_fromR import \
-    fisher_test  # for general m x n contingenct tables. Requires R
 from utils import InitializationError
+try: # for Exact Fisher test on m x n contingency tables. Requires R and rpy2
+    fisher_test_imported = True
+    from independence_tests.fisher_exact_fromR import  fisher_test
+except ModuleNotFoundError:
+    fisher_test_imported = False
 
 # type alias
 Alphabet = Iterable[str]
@@ -127,6 +130,8 @@ class KSContingencyTest(IndependenceTest):
         return p
 
     def _do_fisher(self, array: np.array) -> float:
+        if not fisher_test_imported:
+            raise ModuleNotFoundError("fisher_exact could not be imported. rpy2 package likely not found")
         total_table = self.build_contingency_table(array)
         if self.verbose:
             print(total_table)
