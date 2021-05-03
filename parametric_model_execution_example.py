@@ -13,9 +13,9 @@ model_params = {
     'class' : ParametricModelNonUniformProbs,
     'kwargs': {
         'graph' : graph_1,
-        'structure_function' : modularsumfunc_factory(3),
-        'alphabet' : ['0', '1', '2'],
-        'probs' : [0.4, 0.35, 0.25],
+        'structure_function' : halvingconcatfunc,
+        'alphabet' : ['0', '1'],
+        'probs' : 0.4,
         'shift' : 0,
         'direction' : "Forward",
         'len_strings' : 20000,
@@ -25,26 +25,25 @@ model_params = {
 
 # Choice of Independence Tests
 independence_test_specifications = [
-    # {
-    #     'class'  : KSContingencyTest,
-    #     'kwargs' : {
-    #         'alpha'        : 0.05,
-    #         'kind'         : 'chi2',
-    #         'n_subsamples' : 1,
-    #         'alphabet'     : model_params['kwargs']['alphabet'],
-    #     }
-    # },
+    {
+        'class'  : KSContingencyTest,
+        'kwargs' : {
+            'alpha'        : 0.05,
+            'kind'         : 'chi2',
+            'n_subsamples' : 1,
+            'alphabet'     : model_params['kwargs']['alphabet'],
+        }
+    },
     {
         'class'  : CompressionTest,
         'kwargs' : {
             'criterion' : 'fixed_threshold',
             'compressor': 'I',
-            'pairing'   : 'interleave',
-            'threshold' : t
+            'pairing'   : 'concat',
+            'threshold' : 50
         }
     }
-# ]
-for t in [380, 390, 394, 400]]
+]
 
 # Choice of MultiRun options
 multirun_params = {
@@ -53,8 +52,8 @@ multirun_params = {
     'verbose' : True,
     'save_everything' : True,
     'save_test_results' : True,
-    'send_telegram' : False,
-    'save_to_disk' : True
+    'save_to_disk' : True,
+    'savepath': 'examples/example_multirun'
 }
 
 # Multirun

@@ -48,7 +48,8 @@ def build_multirun_pydot_graph(multirun,
                                node_fontsize = 25,
                                edge_fontsize = 30,
                                draw_underlying_dotted = True,
-                               lighter_lines_level = 0.1):
+                               lighter_lines_level = 0.1,
+                               test_number=0):
     nodes = multirun.model.nodes
     graph_number = get_underlying_graph_number(multirun)
     nodes_kwargs = {n : {
@@ -57,10 +58,9 @@ def build_multirun_pydot_graph(multirun,
                         }
                     for n in nodes}
     # only draw edges with positive count
-    # we assume there's only one indep test in this multirun (so we set i=0)
     edges = [e for e in itertools.combinations(multirun.model.nodes, 2)
-            if multirun.edge_counts[0][e] != 0]
-    edge_frequencies = {e : multirun.edge_counts[0][e]/multirun.n_repetitions for e in edges}
+            if multirun.edge_counts[test_number][e] != 0]
+    edge_frequencies = {e : multirun.edge_counts[test_number][e]/multirun.n_repetitions for e in edges}
     # mark edges that should be drawn more lightly
     lighter_edges = [e for e in edges if edge_frequencies[e] <= lighter_lines_level]
     edges_kwargs = {e : {
