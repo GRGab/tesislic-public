@@ -1,8 +1,8 @@
 from pathlib import Path
 
 from utils import timer
-from analysis.resultados_scripts.models import model_factory
-from analysis.resultados_scripts.multiruns import multirun_factory
+from analysis.models import model_factory
+from analysis.multiruns import multirun_factory
 
 @timer(telegram=True)
 def run_statistical_test_all_models(n_repetitions=1):

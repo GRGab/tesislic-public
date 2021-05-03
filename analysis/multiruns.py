@@ -5,7 +5,7 @@ from joblib import Parallel, delayed
 from pathlib import Path
 
 from analyze_runs import load_multirun
-from analysis.resultados_scripts.models import model_factory
+from analysis.models import model_factory
 from cmitest import CompressionTest
 from ic_runs import ICMultiRun
 from kscontingencytest import KSContingencyTest
