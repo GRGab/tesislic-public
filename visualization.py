@@ -5,7 +5,6 @@ import matplotlib.image as mpimg  # for displaying .png files
 import matplotlib.pyplot as plt
 import networkx as nx
 import pydot
-import seaborn as sns
 
 def visualize_graph(graph,
                     savepath=None,
@@ -88,20 +87,6 @@ def draw_pydot_graph(pydot_graph, path, fmt='pdf'):
     subprocess.run(['neato', f'-T{fmt}', '-Gsplines=true',
                     'temp/temp_output_graphviz.dot', '-o', f'{path}.{fmt}'],
                    check=True)
-
-###############################################################################
-# Matrix viz
-###############################################################################
-
-def visualize_matrix(matrix, title=None, savepath=None):
-    plt.figure()
-    sns.heatmap(matrix, annot=True, fmt='d')
-    if title is not None:
-        plt.title(title)
-    if savepath is not None:
-        plt.savefig("{}/{}.png".format(savepath, title))
-    plt.show()
-
 
 if __name__ == "__main__":
     G = nx.complete_graph(5)

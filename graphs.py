@@ -1,5 +1,4 @@
 import networkx as nx
-from histogram import histogram
 from visualization import visualize_graph
 
 class WGraph(nx.DiGraph):
