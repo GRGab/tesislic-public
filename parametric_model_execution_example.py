@@ -1,7 +1,7 @@
-from cmitest import CompressionTest
+from independence_tests.cmitest import CompressionTest
 from graphs import graph_1, graph_2, graph_3, graph_4, graph_5
 from ic_runs import ICMultiRun
-from kscontingencytest import KSContingencyTest
+from independence_tests.kscontingencytest import KSContingencyTest
 from parametric_models import halvingconcatfunc, bernoullifunc, \
                               modularsumfunc_factory, xorfunc
 from utils import timer

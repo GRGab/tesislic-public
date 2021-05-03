@@ -7,7 +7,7 @@ import numpy as np
 from scipy.stats import chi2_contingency, kstest
 
 from abstract_classes import IndependenceTest
-from fisher_exact_fromR import \
+from independence_tests.fisher_exact_fromR import \
     fisher_test  # for general m x n contingenct tables. Requires R
 from utils import InitializationError
 

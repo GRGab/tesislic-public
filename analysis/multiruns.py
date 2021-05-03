@@ -6,9 +6,9 @@ from pathlib import Path
 
 from analyze_runs import load_multirun
 from analysis.models import model_factory
-from cmitest import CompressionTest
+from independence_tests.cmitest import CompressionTest
 from ic_runs import ICMultiRun
-from kscontingencytest import KSContingencyTest
+from independence_tests.kscontingencytest import KSContingencyTest
 from utils import timer, timestamp
 from visualization import visualize_graph, visualize_multirun
 

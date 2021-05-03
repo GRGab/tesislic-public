@@ -5,7 +5,7 @@ from typing import Optional
 import networkx as nx
 import numpy as np
 
-from cmitest import CompressionTest
+from independence_tests.cmitest import CompressionTest
 from functional_models import load_functional_model
 from utils import InitializationError
 from visualization import visualize_graph

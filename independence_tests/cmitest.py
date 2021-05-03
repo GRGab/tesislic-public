@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Iterable, Optional
 
 from abstract_classes import IndependenceTest
-from information import InformationEstimator
+from independence_tests.information import InformationEstimator
 from utils import InitializationError
 
 

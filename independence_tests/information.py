@@ -6,8 +6,8 @@ import ETC
 import numpy as np
 
 from augmented_lz_complexity import lz_information
-from compression import compression_length
-from I_complexity import calculate_I_complexity
+from independence_tests.compression import compression_length
+from independence_tests.I_complexity import calculate_I_complexity
 
 
 #### Pairing functions (different ways of combining strings for MI and CI calculation)
