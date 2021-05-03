@@ -2,7 +2,6 @@ from itertools import chain, zip_longest
 from typing import Literal
 from utils import timestamp
 
-import ETC
 import numpy as np
 
 from augmented_lz_complexity import lz_information
@@ -21,7 +20,7 @@ pairing_functions = {"concat": concatenation, "interleave": interleaving}
 
 class InformationEstimator():
     def __init__(self,
-                 compressor: Literal['gzip', 'lz', 'ETC', 'I'] = None,
+                 compressor: Literal['gzip', 'lz', 'I'] = None,
                  pairing: Literal['concat', 'interleave'] = None,
                  verbose: bool = False,
                  **kwargs):
@@ -42,17 +41,10 @@ class InformationEstimator():
                                       **self.kwargs)
         elif self.compressor == 'lz':
             return lz_information(self.tuple(*args), **self.kwargs)
-        elif self.compressor == 'ETC':
-            # Quick hack: ETC requires list of positive integers
-            a = [int(character) + 1 for character in self.tuple(*args)]
-            # import pdb; pdb.set_trace()
-            return ETC.compute_1D(a, **self.kwargs)['ETC1D']
         elif self.compressor == 'I':
             # non-binary alphabet functionality available, though not exposed
             return calculate_I_complexity(self.tuple(*args),
                                           tempfile=self.tempfilename)
-        elif self.compressor == 'zstandard':
-            raise NotImplementedError
         else:
             raise ValueError("Invalid compressor name")
     def CI(self, xs, ys):
