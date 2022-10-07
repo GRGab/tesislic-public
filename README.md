@@ -1,5 +1,9 @@
 # Inferencia causal mediante correlación sintáctica
 
+## Instalación via pip
+
+    pip install git+https://github.com/gabrielgoren/tesislic-public@pip_installable
+
 ## Ejemplo de uso
 
 Ejecutar una simulación (un "multirun") con un modelo funcional y múltiples tests de independencia:
