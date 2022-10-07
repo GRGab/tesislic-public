@@ -4,7 +4,7 @@ with open("DESCRIPTION.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='syntactic_causal_discovery',
+    name='tesislic-public',
     version='1.0.0',
     author='Gabriel Goren',
     description='A package for causal discovery using compression as an estimate for algorithmic mutual information',
