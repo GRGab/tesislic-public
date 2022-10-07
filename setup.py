@@ -12,7 +12,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url='https://github.com/gabrielgoren/tesislic-public',
     license='GNUv3',
-    packages=['syntactic_causal_discovery'],
+    packages=setuptools.find_packages(),
     install_requires=['numpy',
                       'matplotlib',
                       'scipy',
