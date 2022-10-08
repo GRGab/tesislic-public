@@ -5,10 +5,10 @@ from typing import Optional
 import networkx as nx
 import numpy as np
 
-from independence_tests.cmitest import CompressionTest
-from functional_models import load_functional_model
-from utils import InitializationError
-from visualization import visualize_graph
+from syntactic_causal_discovery.independence_tests.cmitest import CompressionTest
+from syntactic_causal_discovery.functional_models import load_functional_model
+from syntactic_causal_discovery.utils import InitializationError
+from syntactic_causal_discovery.visualization import visualize_graph
 
 
 def powerset(iterable):

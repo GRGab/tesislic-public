@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 
-from graphs import WGraph, generate_random_DAG
-from string_transformations import random_string, stringnoise
-from utils import InitializationError
-from visualization import visualize_graph
+from syntactic_causal_discovery.graphs import WGraph, generate_random_DAG
+from syntactic_causal_discovery.string_transformations import random_string, stringnoise
+from syntactic_causal_discovery.utils import InitializationError
+from syntactic_causal_discovery.visualization import visualize_graph
 
 plt.ion()
 

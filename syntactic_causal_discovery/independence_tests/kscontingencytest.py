@@ -6,11 +6,11 @@ from typing import Iterable, Optional
 import numpy as np
 from scipy.stats import chi2_contingency, kstest
 
-from abstract_classes import IndependenceTest
-from utils import InitializationError
+from syntactic_causal_discovery.abstract_classes import IndependenceTest
+from syntactic_causal_discovery.utils import InitializationError
 try: # for Exact Fisher test on m x n contingency tables. Requires R and rpy2
     fisher_test_imported = True
-    from independence_tests.fisher_exact_fromR import  fisher_test
+    from syntactic_causal_discovery.independence_tests.fisher_exact_fromR import  fisher_test
 except ModuleNotFoundError:
     fisher_test_imported = False
 

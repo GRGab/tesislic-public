@@ -3,7 +3,7 @@ import os
 
 from random import randint
 
-from utils import save_to_temp
+from syntactic_causal_discovery.utils import save_to_temp
 
 def generate_random_string(length):
     return ''.join(str(randint(0, 1)) for _ in range(length))

@@ -1,5 +1,5 @@
 import networkx as nx
-from visualization import visualize_graph
+from syntactic_causal_discovery.visualization import visualize_graph
 
 class WGraph(nx.DiGraph):
     def __init__(self, **attr):

@@ -5,11 +5,11 @@ from typing import List, Literal, Union
 import dill
 import networkx as nx
 
-from abstract_classes import IndependenceTest
-from functional_models import FunctionalModel
-from ic_algorithm import IC
-from utils import timestamp
-from visualization import visualize_graph, visualize_multirun
+from syntactic_causal_discovery.abstract_classes import IndependenceTest
+from syntactic_causal_discovery.functional_models import FunctionalModel
+from syntactic_causal_discovery.ic_algorithm import IC
+from syntactic_causal_discovery.utils import timestamp
+from syntactic_causal_discovery.visualization import visualize_graph, visualize_multirun
 
 
 class ICMultiRun():

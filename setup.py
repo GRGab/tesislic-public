@@ -20,5 +20,6 @@ setuptools.setup(
                       'graphviz',
                       'pydot',
                       'dill',
-                      'rpy2'],
+                      'rpy2',
+                      'joblib',],
 )

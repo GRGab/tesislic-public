@@ -1,8 +1,10 @@
 from typing import Callable, Union
-from graphs import graph_1, graph_2, graph_3, graph_4, graph_5
-from parametric_models import erraticfunc, halvingconcatfunc, bernoullifunc, \
+from syntactic_causal_discovery.graphs import graph_1, graph_2, graph_3, \
+                                              graph_4, graph_5
+from syntactic_causal_discovery.parametric_models import erraticfunc, \
+                              halvingconcatfunc, bernoullifunc, \
                               xorfunc, sum3func, sum5func
-from functional_models import ParametricModelNonUniformProbs
+from syntactic_causal_discovery.functional_models import ParametricModelNonUniformProbs
 
 # In the following, all models use constant  vals of: noise, len
 # and all root nodes have the same prob dist

@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from utils import timer
-from analysis.models import model_factory
-from analysis.multiruns import multirun_factory
+from syntactic_causal_discovery.utils import timer
+from syntactic_causal_discovery.analysis.models import model_factory
+from syntactic_causal_discovery.analysis.multiruns import multirun_factory
 
 @timer(telegram=True)
 def run_statistical_test_all_models(n_repetitions=1):

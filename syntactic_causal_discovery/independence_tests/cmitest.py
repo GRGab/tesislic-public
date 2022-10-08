@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from typing import Iterable, Optional
 
-from abstract_classes import IndependenceTest
-from independence_tests.information import InformationEstimator
-from utils import InitializationError
+from syntactic_causal_discovery.abstract_classes import IndependenceTest
+from syntactic_causal_discovery.independence_tests.information import InformationEstimator
+from syntactic_causal_discovery.utils import InitializationError
 
 
 class CompressionTest(IndependenceTest):

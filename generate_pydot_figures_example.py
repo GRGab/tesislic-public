@@ -1,6 +1,6 @@
 import dill
 
-from generacion_imagenes import draw_multirun_pydot
+from syntactic_causal_discovery.generacion_imagenes import draw_multirun_pydot
 
 filename = 'examples/example_multirun.pkl'
 

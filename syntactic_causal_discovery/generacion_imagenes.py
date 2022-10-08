@@ -3,8 +3,8 @@ import pydot
 
 import networkx as nx
 
-from graphs import (graph_1, graph_2, graph_3, graph_4, graph_5)
-from visualization import build_pydot_graph, draw_pydot_graph, \
+from syntactic_causal_discovery.graphs import (graph_1, graph_2, graph_3, graph_4, graph_5)
+from syntactic_causal_discovery.visualization import build_pydot_graph, draw_pydot_graph, \
                           get_graphviz_string, to_pydot
 
 graphs = {

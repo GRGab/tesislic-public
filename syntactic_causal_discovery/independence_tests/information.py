@@ -1,12 +1,12 @@
 from itertools import chain, zip_longest
 from typing import Literal
-from utils import timestamp
 
 import numpy as np
 
-from augmented_lz_complexity import lz_information
-from independence_tests.compression import compression_length
-from independence_tests.I_complexity import calculate_I_complexity
+from syntactic_causal_discovery.utils import timestamp
+from syntactic_causal_discovery.augmented_lz_complexity import lz_information
+from syntactic_causal_discovery.independence_tests.compression import compression_length
+from syntactic_causal_discovery.independence_tests.I_complexity import calculate_I_complexity
 
 
 #### Pairing functions (different ways of combining strings for MI and CI calculation)

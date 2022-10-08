@@ -1,11 +1,11 @@
-from independence_tests.cmitest import CompressionTest
-from graphs import graph_1, graph_2, graph_3, graph_4, graph_5
-from ic_runs import ICMultiRun
-from independence_tests.kscontingencytest import KSContingencyTest
-from parametric_models import halvingconcatfunc, bernoullifunc, \
+from syntactic_causal_discovery.independence_tests.cmitest import CompressionTest
+from syntactic_causal_discovery.graphs import graph_1, graph_2, graph_3, graph_4, graph_5
+from syntactic_causal_discovery.ic_runs import ICMultiRun
+from syntactic_causal_discovery.independence_tests.kscontingencytest import KSContingencyTest
+from syntactic_causal_discovery.parametric_models import halvingconcatfunc, bernoullifunc, \
                               modularsumfunc_factory, xorfunc
-from utils import timer
-from functional_models import ParametricModel, ParametricModelUniformProbs, \
+from syntactic_causal_discovery.utils import timer
+from syntactic_causal_discovery.functional_models import ParametricModel, ParametricModelUniformProbs, \
                               ParametricModelRandomProbs, ParametricModelNonUniformProbs
 
 # Choice of model

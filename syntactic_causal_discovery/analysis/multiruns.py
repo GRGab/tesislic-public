@@ -4,13 +4,13 @@ import networkx as nx
 from joblib import Parallel, delayed
 from pathlib import Path
 
-from analyze_runs import load_multirun
-from analysis.models import model_factory
-from independence_tests.cmitest import CompressionTest
-from ic_runs import ICMultiRun
-from independence_tests.kscontingencytest import KSContingencyTest
-from utils import timer, timestamp
-from visualization import visualize_graph, visualize_multirun
+from syntactic_causal_discovery.analyze_runs import load_multirun
+from syntactic_causal_discovery.analysis.models import model_factory
+from syntactic_causal_discovery.independence_tests.cmitest import CompressionTest
+from syntactic_causal_discovery.ic_runs import ICMultiRun
+from syntactic_causal_discovery.independence_tests.kscontingencytest import KSContingencyTest
+from syntactic_causal_discovery.utils import timer, timestamp
+from syntactic_causal_discovery.visualization import visualize_graph, visualize_multirun
 
 def multirun_factory(model, tests, n_repetitions, savepath, visualize=False):
     test_specs = []

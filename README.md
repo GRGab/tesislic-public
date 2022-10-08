@@ -31,3 +31,4 @@ Paquetes necesarios:
 * `pydot`
 * `dill`
 * `rpy2` (opcional, para test de contingencia exacto)
+* `joblib`

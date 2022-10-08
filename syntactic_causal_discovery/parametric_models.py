@@ -4,7 +4,7 @@ from functools import partial, wraps
 from numpy.random import rand
 from random import choice
 
-from string_transformations import left_shift, rev, string_function, symbol_function
+from syntactic_causal_discovery.string_transformations import left_shift, rev, string_function, symbol_function
 
 # Structure function decorator
 def structure_function(func):
