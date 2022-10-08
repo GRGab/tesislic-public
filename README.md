@@ -1,8 +1,6 @@
 # Inferencia causal mediante correlación sintáctica
 
-## Instalación via pip
 
-    pip install git+https://github.com/gabrielgoren/tesislic-public@pip_installable
 ## Ejemplo de uso
 
 Ejecutar una simulación (un "multirun") con un modelo funcional y múltiples tests de independencia:
@@ -10,7 +8,6 @@ Ejecutar una simulación (un "multirun") con un modelo funcional y múltiples te
 ```python parametric_model_execution_example.py```
 
 Modificando el script se puede elegir el modelo y los tests a emplear.
-
 Una vez creado el archivo .pkl con los resultados de la simulación, para generar mejores figuras de los resultados:
 
 ```python generate_pydot_figures_example.py```
@@ -22,8 +19,8 @@ Para las simulaciones presentadas en la tesis, se utilizaron las funciones defin
 ## Dependencias
 
 Versión de Python: >=3.8
-
-Paquetes necesarios:
+Requiere `graphviz` (`sudo apt install graphviz`)
+Paquetes de Python necesarios:
 * `numpy`
 * `matplotlib`
 * `scipy`
@@ -32,3 +29,11 @@ Paquetes necesarios:
 * `pydot`
 * `dill`
 * `rpy2` (opcional, para test de contingencia exacto)
+* `joblib`
+
+## Instalación via pip
+
+    pip install git+https://github.com/gabrielgoren/tesislic-public@pip_installable
+
+Actualmente no todas las funciones funcionan correctamente al instalarse como paquete.
+**TODO**: adaptar el código de guardado en disco para que funcione como paquete.
