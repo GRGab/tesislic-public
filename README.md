@@ -1,8 +1,5 @@
 # Inferencia causal mediante correlación sintáctica
 
-## Instalación via pip
-
-    pip install git+https://github.com/gabrielgoren/tesislic-public@pip_installable
 
 ## Ejemplo de uso
 
@@ -22,7 +19,8 @@ Para las simulaciones presentadas en la tesis, se utilizaron las funciones defin
 ## Dependencias
 
 Versión de Python: >=3.8
-Paquetes necesarios:
+Requiere `graphviz` (`sudo apt install graphviz`)
+Paquetes de Python necesarios:
 * `numpy`
 * `matplotlib`
 * `scipy`
@@ -32,3 +30,10 @@ Paquetes necesarios:
 * `dill`
 * `rpy2` (opcional, para test de contingencia exacto)
 * `joblib`
+
+## Instalación via pip
+
+    pip install git+https://github.com/gabrielgoren/tesislic-public@pip_installable
+
+Actualmente no todas las funciones funcionan correctamente al instalarse como paquete.
+**TODO**: adaptar el código de guardado en disco para que funcione como paquete.
